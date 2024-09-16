@@ -5,12 +5,20 @@
   <Id>d5d4062a-1010-41d4-baba-0aa998128c8b</Id>
   <Logic z:Id="i2" i:type="ExecutedStep">
     <Childs>
-      <AbstractStep z:Id="i3" i:type="ExecutedStep">
+      <AbstractStep z:Id="i3" i:type="CommentStep">
+        <Childs />
+        <Id>8dc20c37-3f2f-4f7b-bd73-8db6f29bb97c</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues />
+        <SelectedOptionId i:nil="true" />
+        <Text>Получает письмо с конфигурацией из почты</Text>
+      </AbstractStep>
+      <AbstractStep z:Id="i4" i:type="ExecutedStep">
         <Childs />
         <Id>802acc19-99d6-47c2-ac2f-eb0e6174f2cf</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i4">
+          <PropertyValue z:Id="i5">
             <PropertyName>MailReadOrder</PropertyName>
             <_dataType>Value</_dataType>
             <_expression i:nil="true" />
@@ -18,7 +26,7 @@
             <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/Activities.Office.Outlook" i:type="d7p1:MailReadOrder">NewestFirst</_value>
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i5">
+          <PropertyValue z:Id="i6">
             <PropertyName>Result</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>ListMailMessage</_expression>
@@ -34,18 +42,18 @@
         <Text></Text>
         <_activityFullName>Activities.Office.Outlook.ReadMailMessage</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i6" i:type="ExecutedStep">
+      <AbstractStep z:Id="i7" i:type="ExecutedStep">
         <Childs>
-          <AbstractStep z:Id="i7" i:type="ExecutedStep">
+          <AbstractStep z:Id="i8" i:type="ExecutedStep">
             <Childs>
-              <AbstractStep z:Id="i8" i:type="ExecutedStep">
+              <AbstractStep z:Id="i9" i:type="ExecutedStep">
                 <Childs>
-                  <AbstractStep z:Id="i9" i:type="ExecutedStep">
+                  <AbstractStep z:Id="i10" i:type="ExecutedStep">
                     <Childs />
                     <Id>5cabb72f-8c8b-4334-a6a8-f9df42f6302c</Id>
-                    <Parent z:Ref="i8" />
+                    <Parent z:Ref="i9" />
                     <PropertyValues>
-                      <PropertyValue z:Id="i10">
+                      <PropertyValue z:Id="i11">
                         <PropertyName>Mail</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>MailMessage</_expression>
@@ -53,7 +61,7 @@
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i11">
+                      <PropertyValue z:Id="i12">
                         <PropertyName>Folder</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>@"Config"</_expression>
@@ -61,7 +69,7 @@
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i12">
+                      <PropertyValue z:Id="i13">
                         <PropertyName>Count</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression></_expression>
@@ -69,7 +77,7 @@
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
-                      <PropertyValue z:Id="i13">
+                      <PropertyValue z:Id="i14">
                         <PropertyName>Files</PropertyName>
                         <_dataType>Expression</_dataType>
                         <_expression>out_ConfigList</_expression>
@@ -87,7 +95,7 @@
                   </AbstractStep>
                 </Childs>
                 <Id>f155ca91-6d8c-4454-8957-096ba52cb929</Id>
-                <Parent z:Ref="i7" />
+                <Parent z:Ref="i8" />
                 <PropertyValues />
                 <SelectedOptionId i:nil="true" />
                 <EnableStatus>true</EnableStatus>
@@ -96,10 +104,10 @@
                 <Text></Text>
                 <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i14" i:type="ExecutedStep">
+              <AbstractStep z:Id="i15" i:type="ExecutedStep">
                 <Childs />
                 <Id>df6ead6a-0c8b-45f1-b80e-c4642afa292f</Id>
-                <Parent z:Ref="i7" />
+                <Parent z:Ref="i8" />
                 <PropertyValues />
                 <SelectedOptionId i:nil="true" />
                 <EnableStatus>true</EnableStatus>
@@ -110,9 +118,9 @@
               </AbstractStep>
             </Childs>
             <Id>15ed734f-f478-4605-8398-9ab064eae2ef</Id>
-            <Parent z:Ref="i6" />
+            <Parent z:Ref="i7" />
             <PropertyValues>
-              <PropertyValue z:Id="i15">
+              <PropertyValue z:Id="i16">
                 <PropertyName>Condition</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>MailMessage.ConversationTopic=="Парсинг"</_expression>
@@ -132,7 +140,7 @@
         <Id>646da156-40fe-4c60-bf28-9b76598ef3de</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i16">
+          <PropertyValue z:Id="i17">
             <PropertyName>Collection</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>ListMailMessage</_expression>
@@ -140,7 +148,7 @@
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i17">
+          <PropertyValue z:Id="i18">
             <PropertyName>Iterator</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>MailMessage</_expression>
@@ -148,7 +156,7 @@
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i18">
+          <PropertyValue z:Id="i19">
             <PropertyName>Counter</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression></_expression>
@@ -178,7 +186,7 @@
   <Name>Получить письмо.pix</Name>
   <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <Params>
-    <Parameter z:Id="i19">
+    <Parameter z:Id="i20">
       <DefaultValueExpression></DefaultValueExpression>
       <Description>Лист со списком файлов конфигураций</Description>
       <Name>out_ConfigList</Name>

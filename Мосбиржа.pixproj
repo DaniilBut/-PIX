@@ -1,6 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <RobotizationProject xmlns:i="http://www.w3.org/2001/XMLSchema-instance" z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/" xmlns="http://schemas.datacontract.org/2004/07/BR.Logic">
-  <Dependencies i:nil="true" />
+  <Dependencies>
+    <ProjectDependency>
+      <Dependencies />
+      <FileName>Microsoft.Office.Interop.Excel.15.0.4795.1001.nupkg</FileName>
+      <Hash>SsVWCI9UQLZOJB8jeNksWTPdvYpy0nrDxpwFOkjkeCw=</Hash>
+      <Id>Microsoft.Office.Interop.Excel</Id>
+      <MasterUrl i:nil="true" />
+      <Name>Microsoft.Office.Interop.Excel</Name>
+      <ServerUrl>nuget.org</ServerUrl>
+      <Version>15.0.4795.1001</Version>
+    </ProjectDependency>
+  </Dependencies>
   <Description></Description>
   <Files>
     <ProjectFileItem z:Id="i2">
@@ -10,6 +21,18 @@
     <ProjectFileItem z:Id="i3">
       <IsMain>false</IsMain>
       <Path>Получить письмо.pix</Path>
+    </ProjectFileItem>
+    <ProjectFileItem z:Id="i4">
+      <IsMain>false</IsMain>
+      <Path>Получить таблицу данных.pix</Path>
+    </ProjectFileItem>
+    <ProjectFileItem z:Id="i5">
+      <IsMain>false</IsMain>
+      <Path>Отправить письмо.pix</Path>
+    </ProjectFileItem>
+    <ProjectFileItem z:Id="i6">
+      <IsMain>false</IsMain>
+      <Path>Создать файл данных.pix</Path>
     </ProjectFileItem>
   </Files>
   <MasterUploadId i:nil="true" />

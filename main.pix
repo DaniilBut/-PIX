@@ -37,22 +37,46 @@
         <EnableStatus>true</EnableStatus>
         <ExceptionHandlingMode>Default</ExceptionHandlingMode>
         <RetryCount>-1</RetryCount>
-        <Text></Text>
+        <Text>Получаем файлы конфигураций</Text>
         <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
       </AbstractStep>
       <AbstractStep z:Id="i7" i:type="ExecutedStep">
         <Childs>
           <AbstractStep z:Id="i8" i:type="ExecutedStep">
             <Childs />
-            <Id>d715a6ad-b3d9-4a99-a1ff-b4ea3d7a3caf</Id>
+            <Id>4da70b6f-aaa4-4611-a656-a78f142fc7b8</Id>
             <Parent z:Ref="i7" />
             <PropertyValues>
               <PropertyValue z:Id="i9">
-                <PropertyName>Text</PropertyName>
+                <PropertyName>FilePath</PropertyName>
                 <_dataType>Expression</_dataType>
-                <_expression>ConfigPath</_expression>
+                <_expression>@"Создать файл данных.pix"</_expression>
                 <_screenShotBase64 i:nil="true" />
                 <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+              <PropertyValue z:Id="i10">
+                <PropertyName>Parameters</PropertyName>
+                <_dataType>Value</_dataType>
+                <_expression i:nil="true" />
+                <_screenShotBase64 i:nil="true" />
+                <_value xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d9p1:ArrayOfArgumentItem">
+                  <d9p1:ArgumentItem z:Id="i11">
+                    <d9p1:ArgumentName>in_ConfigPath</d9p1:ArgumentName>
+                    <d9p1:Expression>ConfigPath</d9p1:Expression>
+                    <d9p1:Type>System.String</d9p1:Type>
+                  </d9p1:ArgumentItem>
+                  <d9p1:ArgumentItem z:Id="i12">
+                    <d9p1:ArgumentName>out_FilePath</d9p1:ArgumentName>
+                    <d9p1:Expression>FilePath</d9p1:Expression>
+                    <d9p1:Type>System.String</d9p1:Type>
+                  </d9p1:ArgumentItem>
+                  <d9p1:ArgumentItem z:Id="i13">
+                    <d9p1:ArgumentName>out_NumStr</d9p1:ArgumentName>
+                    <d9p1:Expression>NumStr</d9p1:Expression>
+                    <d9p1:Type>System.Object</d9p1:Type>
+                  </d9p1:ArgumentItem>
+                </_value>
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
               </PropertyValue>
             </PropertyValues>
@@ -60,14 +84,54 @@
             <EnableStatus>true</EnableStatus>
             <ExceptionHandlingMode>Default</ExceptionHandlingMode>
             <RetryCount>-1</RetryCount>
-            <Text></Text>
-            <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+            <Text>Создаем файл для отправки</Text>
+            <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i14" i:type="ExecutedStep">
+            <Childs />
+            <Id>e69563bf-ffcf-4961-934a-b4bd1f90e004</Id>
+            <Parent z:Ref="i7" />
+            <PropertyValues>
+              <PropertyValue z:Id="i15">
+                <PropertyName>FilePath</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>@"Отправить письмо.pix"</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+              <PropertyValue z:Id="i16">
+                <PropertyName>Parameters</PropertyName>
+                <_dataType>Value</_dataType>
+                <_expression i:nil="true" />
+                <_screenShotBase64 i:nil="true" />
+                <_value xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d9p1:ArrayOfArgumentItem">
+                  <d9p1:ArgumentItem z:Id="i17">
+                    <d9p1:ArgumentName>in_FilePath</d9p1:ArgumentName>
+                    <d9p1:Expression>FilePath</d9p1:Expression>
+                    <d9p1:Type>System.String</d9p1:Type>
+                  </d9p1:ArgumentItem>
+                  <d9p1:ArgumentItem z:Id="i18">
+                    <d9p1:ArgumentName>in_NumStr</d9p1:ArgumentName>
+                    <d9p1:Expression>NumStr</d9p1:Expression>
+                    <d9p1:Type>System.Int32</d9p1:Type>
+                  </d9p1:ArgumentItem>
+                </_value>
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>Отправляем файл</Text>
+            <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
           </AbstractStep>
         </Childs>
         <Id>5cc5da13-7575-44a4-82e6-93c2b234d55d</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i10">
+          <PropertyValue z:Id="i19">
             <PropertyName>Collection</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>ConfigList</_expression>
@@ -75,7 +139,7 @@
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i11">
+          <PropertyValue z:Id="i20">
             <PropertyName>Iterator</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>ConfigPath</_expression>
@@ -83,7 +147,7 @@
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i12">
+          <PropertyValue z:Id="i21">
             <PropertyName>Counter</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression></_expression>
@@ -96,7 +160,7 @@
         <EnableStatus>true</EnableStatus>
         <ExceptionHandlingMode>Default</ExceptionHandlingMode>
         <RetryCount>-1</RetryCount>
-        <Text></Text>
+        <Text>Обрабатываем каждый файл конфигурации</Text>
         <_activityFullName>BR.Core.Base.LoopForEach</_activityFullName>
       </AbstractStep>
     </Childs>
@@ -115,11 +179,23 @@
   <Params />
   <TemplateVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" i:nil="true" />
   <Variables xmlns:d2p1="http://schemas.datacontract.org/2004/07/BR.Logic.Params">
-    <d2p1:Variable z:Id="i13">
+    <d2p1:Variable z:Id="i22">
       <d2p1:DefaultValueExpression></d2p1:DefaultValueExpression>
-      <d2p1:Description></d2p1:Description>
+      <d2p1:Description>Лист с набором файлов кофигураций</d2p1:Description>
       <d2p1:Name>ConfigList</d2p1:Name>
       <d2p1:TypeString>System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</d2p1:TypeString>
+    </d2p1:Variable>
+    <d2p1:Variable z:Id="i23">
+      <d2p1:DefaultValueExpression></d2p1:DefaultValueExpression>
+      <d2p1:Description>Путь до файла с данными</d2p1:Description>
+      <d2p1:Name>FilePath</d2p1:Name>
+      <d2p1:TypeString>System.String</d2p1:TypeString>
+    </d2p1:Variable>
+    <d2p1:Variable z:Id="i24">
+      <d2p1:DefaultValueExpression></d2p1:DefaultValueExpression>
+      <d2p1:Description>Количество строк в файле</d2p1:Description>
+      <d2p1:Name>NumStr</d2p1:Name>
+      <d2p1:TypeString>System.Int32</d2p1:TypeString>
     </d2p1:Variable>
   </Variables>
   <Version i:nil="true" />
