@@ -34,6 +34,10 @@
       <IsMain>false</IsMain>
       <Path>Создать файл данных.pix</Path>
     </ProjectFileItem>
+    <ProjectFileItem z:Id="i7">
+      <IsMain>false</IsMain>
+      <Path>test.pix</Path>
+    </ProjectFileItem>
   </Files>
   <MasterUploadId i:nil="true" />
   <Name>Мосбиржа</Name>
